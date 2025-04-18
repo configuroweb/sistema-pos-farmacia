@@ -1,0 +1,449 @@
+/* custom.css */
+/* Variables de color --------------------------------------------------*/
+:root {
+    --cweb-primary: #2b6cb0;         /* azul moderno */
+    --cweb-primary-dark: #1e4e8c;
+    --cweb-accent: #63b3ed;          /* acento claro */
+    --cweb-text: #000000;            /* texto negro */
+    --cweb-text-darker: #000000;     /* texto más oscuro para hover */
+    --cweb-bg: #f7fafc;              /* fondo claro */
+    --cweb-hover-bg: #edf2f7;        /* color de fondo hover */
+    --cweb-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* sombras sutiles */
+    --cweb-radius: 6px;              /* bordes redondeados */
+    --cweb-transition: all 0.2s ease; /* transiciones suaves */
+  }
+  
+  /* Estilos generales --------------------------------------------------*/
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--cweb-bg);
+    color: var(--cweb-text);
+    line-height: 1.5;
+  }
+  
+  /* Navbar -------------------------------------------------------------*/
+  .main-header {
+    background: white;
+    box-shadow: var(--cweb-shadow);
+    border: none;
+  }
+  
+  .main-header .navbar-nav .nav-link {
+    color: var(--cweb-text);
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    transition: var(--cweb-transition);
+  }
+  
+  .main-header .navbar-nav .nav-link:hover {
+    color: var(--cweb-text-darker);
+    background-color: var(--cweb-hover-bg);
+    font-weight: 600;
+  }
+  
+  .navbar-brand {
+    font-weight: 600;
+    color: var(--cweb-primary) !important;
+  }
+  
+  .navbar-brand:hover {
+    color: var(--cweb-primary-dark) !important;
+  }
+  
+  /* Sidebar ------------------------------------------------------------*/
+  .main-sidebar {
+    background: white;
+    box-shadow: var(--cweb-shadow);
+    border-right: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .main-sidebar .brand-link {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .nav-sidebar .nav-item {
+    margin-bottom: 0.25rem;
+  }
+  
+  .nav-sidebar .nav-link {
+    color: var(--cweb-text);
+    border-radius: var(--cweb-radius);
+    margin: 0 0.5rem;
+    transition: var(--cweb-transition);
+  }
+  
+  .nav-sidebar .nav-link:hover {
+    background-color: var(--cweb-hover-bg);
+    color: var(--cweb-text-darker);
+    transform: translateX(3px);
+    font-weight: 600;
+  }
+  
+  .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: var(--cweb-primary);
+    color: white;
+    box-shadow: var(--cweb-shadow);
+  }
+  
+  .nav-sidebar .nav-icon {
+    opacity: 0.75;
+  }
+  
+  /* Botones ------------------------------------------------------------*/
+  .btn {
+    border-radius: var(--cweb-radius);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: var(--cweb-transition);
+    box-shadow: none;
+  }
+  
+  .btn-primary {
+    background-color: var(--cweb-primary);
+    border-color: var(--cweb-primary);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--cweb-primary-dark);
+    border-color: var(--cweb-primary-dark);
+    box-shadow: var(--cweb-shadow);
+    transform: translateY(-2px);
+  }
+  
+  .btn-outline-primary {
+    color: var(--cweb-primary);
+    border-color: var(--cweb-primary);
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--cweb-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  /* Tarjetas -----------------------------------------------------------*/
+  .card {
+    border: none;
+    border-radius: var(--cweb-radius);
+    box-shadow: var(--cweb-shadow);
+    transition: var(--cweb-transition);
+    overflow: hidden;
+  }
+  
+  .card-title, .card-text {
+    color: var(--cweb-text);
+  }
+  
+  .card:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    border-left: 3px solid var(--cweb-primary);
+  }
+  
+  .card:hover .card-title {
+    color: var(--cweb-text-darker);
+    font-weight: 700;
+  }
+  
+  .card:hover .card-text {
+    color: var(--cweb-text-darker);
+  }
+  
+  .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    color: var(--cweb-text);
+  }
+  
+  .card-primary:not(.card-outline) > .card-header {
+    background: var(--cweb-primary);
+    color: white;
+  }
+  
+  /* Formularios --------------------------------------------------------*/
+  .form-control {
+    border-radius: var(--cweb-radius);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 0.5rem 0.75rem;
+    transition: var(--cweb-transition);
+    color: var(--cweb-text);
+  }
+  
+  .form-control:focus {
+    border-color: var(--cweb-accent);
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.3);
+    transform: translateY(-1px);
+    color: var(--cweb-text-darker);
+  }
+  
+  /* Tablas -------------------------------------------------------------*/
+  .table {
+    border-collapse: separate;
+    border-spacing: 0;
+    color: var(--cweb-text);
+  }
+  
+  .table th {
+    background-color: rgba(0,0,0,0.02);
+    border-top: none;
+    font-weight: 600;
+    color: var(--cweb-text);
+  }
+  
+  .table td {
+    color: var(--cweb-text);
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(99, 179, 237, 0.1);
+    transform: scale(1.005);
+    color: var(--cweb-text-darker);
+    font-weight: 500;
+  }
+  
+  /* Paginación ---------------------------------------------------------*/
+  .pagination .page-link {
+    border-radius: var(--cweb-radius);
+    margin: 0 0.15rem;
+    color: var(--cweb-primary);
+    transition: var(--cweb-transition);
+  }
+  
+  .pagination .page-item .page-link:hover {
+    background-color: var(--cweb-primary);
+    color: white;
+    transform: translateY(-2px);
+    font-weight: 600;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: var(--cweb-primary);
+    border-color: var(--cweb-primary);
+  }
+  
+  /* Enlaces -----------------------------------------------------------*/
+  a {
+    color: var(--cweb-primary);
+    transition: var(--cweb-transition);
+  }
+  
+  a:hover {
+    color: var(--cweb-text-darker);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--cweb-text-darker);
+    font-weight: 600;
+  }
+  
+  /* Badges y Pills -----------------------------------------------------*/
+  .badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+    border-radius: var(--cweb-radius);
+  }
+  
+  /* Espacios y márgenes ------------------------------------------------*/
+  .content-wrapper {
+    padding: 1.5rem;
+    background-color: var(--cweb-bg);
+  }
+  
+  /* Animaciones --------------------------------------------------------*/
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .content-wrapper > .content {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Efectos interactivos adicionales -----------------------------------*/
+  .dropdown-item {
+    color: var(--cweb-text);
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--cweb-hover-bg);
+    color: var(--cweb-text-darker);
+    padding-left: 1.6rem;
+    font-weight: 600;
+  }
+  
+  .nav-tabs .nav-link {
+    color: var(--cweb-text);
+  }
+  
+  .nav-tabs .nav-link:hover {
+    border-bottom: 2px solid var(--cweb-text-darker);
+    color: var(--cweb-text-darker);
+    font-weight: 600;
+  }
+  
+  .list-group-item {
+    color: var(--cweb-text);
+  }
+  
+  .list-group-item:hover {
+    background-color: var(--cweb-hover-bg);
+    border-left: 3px solid var(--cweb-primary);
+    padding-left: calc(1.25rem - 3px);
+    color: var(--cweb-text-darker);
+    font-weight: 600;
+  }
+  
+  /* Menús desplegables -------------------------------------------------*/
+  .dropdown-menu {
+    border-radius: var(--cweb-radius);
+    box-shadow: var(--cweb-shadow);
+    border: none;
+  }
+  
+  /* Iconos interactivos ------------------------------------------------*/
+  .nav-link i:hover, 
+  .btn i:hover, 
+  .action-icon:hover {
+    color: var(--cweb-text-darker);
+  }
+  
+  /* Texto en general --------------------------------------------------*/
+  p, h1, h2, h3, h4, h5, h6, span, div {
+    color: var(--cweb-text);
+  }
+
+  /* Dashboard specific styles */
+.modern-dashboard .info-box {
+    border-radius: var(--cweb-radius);
+    box-shadow: var(--cweb-shadow);
+    transition: var(--cweb-transition);
+    margin-bottom: 1.5rem;
+  }
+  
+  .modern-dashboard .info-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modern-dashboard .info-box-icon {
+    border-radius: var(--cweb-radius) 0 0 var(--cweb-radius);
+  }
+  
+  .modern-dashboard .info-box-content {
+    padding: 10px 15px;
+  }
+  
+  .modern-dashboard .info-box-text {
+    font-weight: 500;
+  }
+  
+  .modern-dashboard .info-box-number {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  /* Product items styling */
+  .product-item {
+    margin-bottom: 1.5rem;
+    border-radius: var(--cweb-radius);
+    overflow: hidden;
+    box-shadow: var(--cweb-shadow);
+    transition: var(--cweb-transition);
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--cweb-radius) var(--cweb-radius) 0 0;
+  }
+  
+  .product-info {
+    padding: 0.75rem;
+  }
+  
+  .product-info h5 {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--cweb-text);
+  }
+  
+  /* Quick Actions styling */
+  .nav-pills .nav-link {
+    border-radius: var(--cweb-radius);
+    margin: 0.25rem;
+    transition: var(--cweb-transition);
+  }
+  
+  .nav-pills .nav-link:hover {
+    background-color: var(--cweb-hover-bg);
+    transform: translateX(5px);
+  }
+  
+  /* Widget User styling */
+  .widget-user .widget-user-header {
+    background-color: var(--cweb-primary) !important;
+    border-radius: var(--cweb-radius) var(--cweb-radius) 0 0;
+  }
+  
+  .widget-user .widget-user-image img {
+    border: 3px solid var(--cweb-bg);
+  }
+  
+  /* Additional color class */
+  .bg-accent {
+    background-color: var(--cweb-accent) !important;
+    color: white;
+  }
+  
+  /* Icon animations */
+  #icon {
+    font-size: 1.2rem;
+    transition: var(--cweb-transition);
+  }
+  
+  .info-box:hover #icon {
+    transform: scale(1.2);
+  }
+  
+  /* Add animation classes for cards */
+  .animate__fadeIn {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* Main style improvements */
+  .modern-dashboard .card {
+    margin-bottom: 1.5rem;
+    border-radius: var(--cweb-radius);
+    box-shadow: var(--cweb-shadow);
+    overflow: hidden;
+  }
+  
+  .modern-dashboard .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 1rem 1.25rem;
+  }
+  
+  .modern-dashboard .card-title {
+    font-weight: 600;
+    color: var(--cweb-text);
+  }
+  
+  .modern-dashboard .btn-primary {
+    background-color: var(--cweb-primary);
+    border-color: var(--cweb-primary);
+    transition: var(--cweb-transition);
+  }
+  
+  .modern-dashboard .btn-primary:hover {
+    background-color: var(--cweb-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--cweb-shadow);
+  }
